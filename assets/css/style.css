@@ -13,7 +13,7 @@ body {
 }
 
 p {
-    color: #b0785c;
+    color: #000000;
     font-size: 1.5em;
 }
 
@@ -37,6 +37,7 @@ button {
 /* !!! Top bar Container !!! */
 .top-bar p {
     float: right;
+    color: #b0785c
 }
 
 /* !!! Inside Container !!! */
@@ -45,6 +46,9 @@ button {
     height: 100%;
     width: 50%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 /* !!! Header/Quiz Start Container !!! */
