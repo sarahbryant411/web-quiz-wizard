@@ -9,7 +9,8 @@
 
 body {
     background-color: #EFEBE0;
-}
+    overflow: hidden;
+}  
 
 p {
     color: #000000;
@@ -19,7 +20,8 @@ p {
 }
 
 button {
-    background-color: #EFEBE0;
+    outline: none;
+    background-color:  #EFEBE0;
     color: #b0785c;
     font-size: 1em;
     display: block;
@@ -30,6 +32,10 @@ h1,h2 {
     text-align: center;
 
 }
+
+li {
+    list-style: none;
+}
 /* !!! Main Container !!! */
 
 .main-container {
@@ -37,7 +43,7 @@ h1,h2 {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: start;
 }
 
 /* !!! Top bar Container !!! */
@@ -62,8 +68,11 @@ h1,h2 {
 
 }
 /* !!! Header/Quiz Start Container !!! */
-.quiz-start {
+.quiz-start, main {
     margin-bottom: 30vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #EFEBE0;
 }
 
 .quiz-start p {
@@ -72,7 +81,11 @@ h1,h2 {
 
 .quiz-start button {
     display: block;
-    margin: auto;
+    margin: 0 auto;
 
 }
 /* !!! Main Quiz Area !!! */
+main {
+    display: block;
+
+}
