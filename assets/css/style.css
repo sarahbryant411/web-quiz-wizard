@@ -14,7 +14,8 @@ body {
 
 p {
     color: #000000;
-    font-size: 1.5em;
+    font-size: 1em;
+    text-align: center;
 }
 
 button {
@@ -24,6 +25,10 @@ button {
     font-size: 1.5em;
 }
 
+h1,h2 {
+    text-align: center;
+
+}
 /* !!! Main Container !!! */
 
 .main-container {
@@ -31,7 +36,7 @@ button {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 /* !!! Top bar Container !!! */
@@ -48,9 +53,16 @@ button {
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
 
 }
 /* !!! Header/Quiz Start Container !!! */
+.quiz-start {
+    margin-bottom: 30vh;
 
+}
+
+.quiz-start p {
+
+}
 /* !!! Main Quiz Area !!! */
