@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid #9CAF88;
+    font-family: Arial, Helvetica, sans-serif;
 
-     border: 1px solid #9CAF88;
 }
 
 body {
     background-color: #EFEBE0;
-    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 p {
@@ -16,8 +17,19 @@ p {
     font-size: 1.5em;
 }
 
+button {
+    outline: none;
+    background-color: #EFEBE0;
+    color: #b0785c;
+    font-size: 1.5em;
+
+}
+
 .main-container {
     padding: 10px;
 }
 
+.top-bar p {
+    float: right;
 
+}
