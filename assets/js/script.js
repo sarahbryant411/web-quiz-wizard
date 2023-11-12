@@ -5,8 +5,11 @@ var endScreen = document.querySelector(".end-screen")
 var optionButtons = document.querySelector("#option-buttons")
 var promptEl = document.querySelector("#prompt")
 var timeDisplay = document.querySelector("#time-display")
+var initialsForm = document.querySelector("#initials-form")
+var initialsInput = document.querySelector("#initials-input")
 
 startBtn.addEventListener("click", startGame)
+initialsForm.addEventListener("submit", recordScore)
 
 var currentQuestion = 0;
 var timeRemaining = 60;
@@ -48,7 +51,7 @@ function startGame() {
 
     quizStart.classList.add("hidden")
     quizScreen.classList.remove("hidden")
- 
+
     timeDisplay.textContent = timeRemaining;
 
     // start the timer
@@ -81,7 +84,14 @@ function renderQuestion() {
         button.addEventListener("click", (e) => {
 
             // correct or incorrect ?
-            console.log(e.target.dataset.letter === questions[currentQuestion].correct)
+            if (e.target.dataset.letter !== questions[currentQuestion].correct) {
+                timeRemaining -= 10;
+                timeDisplay.textContent = timeRemaining;
+                if (timeRemaining <= 0) {
+                    timeRemaining = 0;
+                    endGame()
+                }
+            }
 
             currentQuestion++
             if (currentQuestion >= questions.length) {
@@ -100,4 +110,29 @@ function endGame() {
     quizScreen.classList.add("hidden")
     // show the end-screen
     endScreen.classList.remove("hidden")
+}
+
+function recordScore(e) {
+    e.preventDefault()
+    // console.log(initialsInput.value, timeRemaining)
+
+    const scoresFromStorage = JSON.parse(localStorage.getItem("quizScores"))
+    const scoreToWrite = [{ initials: initialsInput.value, time: timeRemaining }]
+
+    if (!scoresFromStorage || scoresFromStorage.length === 0) {
+        localStorage.setItem("quizScores", JSON.stringify([scoreToWrite]))
+    } else  {
+        scoresFromStorage.push(scoreToWrite)
+        localStorage.setItem("quizScores", JSON.stringify(scoresFromStorage))
+    }
+    // [
+    //     {
+    //         initials: "sb",
+    //         time: 44
+    //     },
+    //     {
+    //         initials: "jf",
+    //         time: 30
+    //     }
+    //  ]
 }
