@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device=width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <!-- main outer div -->
     <!-- added class to the div-->
-    <div class="main-container">
+    <main>
 
         <!-- top section where the timer and high scores are -->
         <!-- added class to the div-->
@@ -26,29 +27,29 @@
                 <h1>Welcome to the quiz</h1>
                 <p>Try to answer the following code-related questions within the time limit.
                     Keep in mind that incorrect answers will penalize your time by ten seconds!</p>
-                <button><strong>Start Quiz!</strong></button>
+                <button id="start-btn">Start Quiz!</button>
 
             </header>
 
             <!-- where the quiz content will be -->
-            <main>
-                <section class="quiz-screen">
-                    <h2>Question Here</h2>
-                    <ul>
-                        <li><button>Answer 1 </li></button></li>
-                        <li><button>Answer 2 </li></button></li>
-                        <li><button>Answer 3 </li></button></li>
-                        <li><button>Answer 4 </li></button></li>
-                    </ul>
-                </section>
 
-            </main>
+            <section class="quiz-screen hidden">
+                <h2>Question Here</h2>
+                <ul>
+                    <li><button>Answer 1 </li></button></li>
+                    <li><button>Answer 2 </li></button></li>
+                    <li><button>Answer 3 </li></button></li>
+                    <li><button>Answer 4 </li></button></li>
+                </ul>
+            </section>
+
+
 
         </div>
 
 
-    </div>
-
+    </main>
+<script src="./assets/js/script.js"></script>
 </body>
 
 </html>

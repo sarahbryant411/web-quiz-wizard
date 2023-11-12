@@ -9,15 +9,28 @@ body {
     background-color: #EFEBE0;
 }  
 
-p {
-    /* text-align: center; */
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
 }
+
+p {
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+
 
 li {
     list-style: none;
 }
-.main-container {
 
+.inside-container {
+    max-width: 600px;
+    background-color: #9CAF88;
+    margin: auto;
+    padding: 12px;
 }
 
 .top-bar {
@@ -34,4 +47,18 @@ li {
 
 .top-bar a:hover {
     text-decoration: underline;
+}
+
+.quiz-start {
+   display: flex;
+   flex-direction: column;
+}
+
+.quiz-start button {
+    width: 150px;
+    margin: auto;
+}
+
+.hidden {
+    display: none;
 }
