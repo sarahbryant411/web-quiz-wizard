@@ -1,8 +1,11 @@
 var startBtn = document.querySelector("#start-btn");
 var quizStart = document.querySelector('.quiz-start');
 var quizScreen = document.querySelector(".quiz-screen")
+var optionButtons = document.querySelector("#option-buttons")
 
 startBtn.addEventListener("click", startGame)
+
+var currentQuestion = 0;
 
 var questions = [
     {
@@ -40,7 +43,20 @@ function startGame() {
 
     quizStart.classList.add("hidden")
     quizScreen.classList.remove("hidden")
+    renderQuestion()
     //hide the quiz-start
     // show the quiz-screen
     //start the timer
+}
+
+function renderQuestion() {
+    var options = questions[currentQuestion].options
+
+    for (letter in options) {
+        var li = document.createElement("li")
+        li.innerHTML = `<button>${options[letter]}</button>`
+        optionButtons.append(li)
+    }
+
+    
 }
