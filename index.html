@@ -34,7 +34,7 @@
             <!-- where the quiz content will be -->
 
             <section class="quiz-screen hidden">
-                <h2>Question Here</h2>
+                <h2 id="prompt">Question Here</h2>
                 <ul id="option-buttons">
                     <!-- <li><button>Answer 1</button></li>
                     <li><button>Answer 2</button></li>
@@ -43,7 +43,15 @@
                 </ul>
             </section>
 
+            <section class="end-screen hidden">
+                <h2>The end</h2>
 
+                <p>Enter your initials to save your score:</p>
+                <form>
+                    <input type="text" placeholder="Initials">
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
 
         </div>
 
