@@ -62,3 +62,20 @@ li {
 .hidden {
     display: none;
 }
+
+.scores-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 600px;
+    margin: auto;
+}
+
+.scores-grid h3{
+    border: 1px solid red;
+}
+
+.scores-grid p {
+    text-align: left;
+    border: 1px solid red;
+}

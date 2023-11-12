@@ -117,7 +117,7 @@ function recordScore(e) {
     // console.log(initialsInput.value, timeRemaining)
 
     const scoresFromStorage = JSON.parse(localStorage.getItem("quizScores"))
-    const scoreToWrite = [{ initials: initialsInput.value, time: timeRemaining }]
+    const scoreToWrite = { initials: initialsInput.value, time: timeRemaining }
 
     if (!scoresFromStorage || scoresFromStorage.length === 0) {
         localStorage.setItem("quizScores", JSON.stringify([scoreToWrite]))
