@@ -57,6 +57,7 @@ li {
 .quiz-start button {
     width: 150px;
     margin: auto;
+    text-align: center;
 }
 
 .hidden {
@@ -72,10 +73,11 @@ li {
 }
 
 .scores-grid h3{
-    border: 1px solid red;
+    border: 2.5px solid #9CAF88;
+    text-align: center;
 }
 
 .scores-grid p {
-    text-align: left;
-    border: 1px solid red;
+    text-align: center;
+    border: 2.5px solid #9CAF88;
 }
