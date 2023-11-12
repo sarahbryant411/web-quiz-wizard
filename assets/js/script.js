@@ -121,7 +121,7 @@ function recordScore(e) {
 
     if (!scoresFromStorage || scoresFromStorage.length === 0) {
         localStorage.setItem("quizScores", JSON.stringify([scoreToWrite]))
-    } else  {
+    } else {
         scoresFromStorage.push(scoreToWrite)
         localStorage.setItem("quizScores", JSON.stringify(scoresFromStorage))
     }
